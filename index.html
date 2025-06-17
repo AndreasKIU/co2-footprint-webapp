@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,27 +18,47 @@
     </div>
   </header>
 
-  <main class="container my-4">
-    <section>
-      <h2 class="mb-3">Emissionen nach Land und Unternehmen</h2>
-      <p>Diese Tabelle zeigt fiktive CO₂-Emissionsdaten. Die Daten sind sortier- und filterbar.</p>
+  <div class="container my-4 d-flex">
+    <!-- Sidebar -->
+    <aside id="lokalmenue" class="me-4">
+      <h5 class="fw-bold">Menü</h5>
+      <ul class="nav flex-column" id="localLinks">
+        <li class="nav-item"><a class="nav-link" href="#tabelle">Zur Tabelle</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Nach oben</a></li>
+      </ul>
+    </aside>
 
-      <input type="text" id="filter" placeholder="Suche nach Land oder Unternehmen" class="form-control mb-3">
+    <!-- Hauptinhalt -->
+    <main class="flex-grow-1">
+      <section id="tabelle">
+        <h2 class="mb-3">Emissionen nach Land und Unternehmen</h2>
+        <p>Diese Tabelle zeigt fiktive CO₂-Emissionsdaten. Die Daten sind sortier- und filterbar.</p>
 
-      <table class="table table-striped" id="emissionTable">
-        <thead>
-          <tr>
-            <th>Land</th>
-            <th>Unternehmen</th>
-            <th>Emissionen (in Mio. Tonnen)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Dynamisch befüllt durch JavaScript -->
-        </tbody>
-      </table>
-    </section>
-  </main>
+        <input type="text" id="filter" placeholder="Suche nach Land oder Unternehmen" class="form-control mb-3">
+
+        <table class="table table-striped" id="emissionTable">
+          <thead>
+            <tr>
+              <th>Land</th>
+              <th>Unternehmen</th>
+              <th>Emissionen (in Mio. Tonnen)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dynamisch befüllt durch JavaScript -->
+          </tbody>
+        </table>
+      </section>
+
+      <section id="kontakt" class="my-5">
+        <h2>Kontakt</h2>
+        <p>Für Rückfragen oder Feedback zur CO₂-Footprint-Seite kontaktieren Sie uns bitte unter:  
+          <a href="mailto:info@co2-initiative.org">info@co2-initiative.org</a>
+        </p>
+      </section>
+    </main>
+  </div>
 
   <footer class="bg-light text-center p-3">
     <small>&copy; 2025 CO₂-Footprint Initiative – Impressum & Datenschutz</small>

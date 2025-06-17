@@ -1,3 +1,28 @@
 body {
   font-family: Arial, sans-serif;
 }
+
+/* Sidebar-Stil für lokales Menü */
+#lokalmenue {
+  width: 200px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  height: fit-content;
+}
+#lokalmenue .nav-link {
+  color: #0d6efd;
+  padding: 0.25rem 0;
+}
+#lokalmenue .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Schriftkulturbasiert links oder rechts positionieren */
+.ltr #lokalmenue {
+  float: left;
+}
+.rtl #lokalmenue {
+  float: right;
+}
